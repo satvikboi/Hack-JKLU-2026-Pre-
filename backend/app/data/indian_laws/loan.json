@@ -1,0 +1,92 @@
+{
+    "law_name": "RBI Guidelines & NBFC Regulations",
+    "jurisdiction": "India",
+    "contract_type": "loan",
+    "standard_clauses": [
+        {
+            "clause_id": "LOAN_001",
+            "clause_name": "Interest Rate Disclosure",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "RBI Master Direction, Fair Practices Code",
+            "red_flag_if": "interest rate not clearly specified or hidden charges",
+            "plain_english": "The annualized interest rate must be clearly disclosed.",
+            "plain_hindi": "वार्षिक ब्याज दर स्पष्ट रूप से बताई जानी चाहिए।",
+            "template_clause": "The annualized rate of interest shall be [X]% p.a.",
+            "keywords_to_detect": [
+                "interest rate",
+                "rate of interest",
+                "annual rate",
+                "APR"
+            ]
+        },
+        {
+            "clause_id": "LOAN_002",
+            "clause_name": "Prepayment/Foreclosure Terms",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "RBI Circular, Prepayment Charges",
+            "red_flag_if": "prepayment penalty on floating rate loans",
+            "plain_english": "No prepayment penalty can be charged on floating rate loans.",
+            "plain_hindi": "फ्लोटिंग रेट ऋणों पर कोई प्रीपेमेंट जुर्माना नहीं लगाया जा सकता।",
+            "template_clause": "Prepayment of the loan may be made without penalty for floating rate loans.",
+            "keywords_to_detect": [
+                "prepayment",
+                "foreclosure",
+                "early repayment",
+                "penalty"
+            ]
+        },
+        {
+            "clause_id": "LOAN_003",
+            "clause_name": "EMI Structure",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "RBI Fair Practices Code",
+            "red_flag_if": "EMI not clearly defined or includes hidden fees",
+            "plain_english": "EMI amount, tenure, and breakup must be clearly specified.",
+            "plain_hindi": "EMI राशि, अवधि और विवरण स्पष्ट रूप से निर्दिष्ट होने चाहिए।",
+            "template_clause": "The EMI shall be INR [amount] for [X] months.",
+            "keywords_to_detect": [
+                "EMI",
+                "monthly installment",
+                "repayment schedule",
+                "tenure"
+            ]
+        },
+        {
+            "clause_id": "LOAN_004",
+            "clause_name": "Cooling-Off Period",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "RBI Master Direction on Loans",
+            "red_flag_if": "no cooling-off or look-up period for borrower",
+            "plain_english": "Borrower should have a look-up period to exit the loan without penalty.",
+            "plain_hindi": "उधारकर्ता को बिना जुर्माने के ऋण से बाहर निकलने के लिए एक लुक-अप अवधि होनी चाहिए।",
+            "template_clause": "The Borrower shall have a look-up period of [X] days from the date of disbursement.",
+            "keywords_to_detect": [
+                "cooling off",
+                "look-up period",
+                "exit",
+                "cancellation period"
+            ]
+        },
+        {
+            "clause_id": "LOAN_005",
+            "clause_name": "Recovery Practices",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "RBI Fair Practices Code",
+            "red_flag_if": "coercive or harassing recovery methods mentioned",
+            "plain_english": "Lender must follow fair recovery practices. Harassment is illegal.",
+            "plain_hindi": "ऋणदाता को उचित वसूली प्रथाओं का पालन करना चाहिए। उत्पीड़न अवैध है।",
+            "template_clause": "Recovery shall be conducted in accordance with RBI Fair Practices Code.",
+            "keywords_to_detect": [
+                "recovery",
+                "collection",
+                "default",
+                "enforcement"
+            ]
+        }
+    ]
+}

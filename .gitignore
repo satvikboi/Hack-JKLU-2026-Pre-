@@ -1,0 +1,78 @@
+# ── Python ────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# ── Virtual Environment ──────────────────────
+backend/venv/
+venv/
+.venv/
+env/
+
+# ── Environment Variables ────────────────────
+.env
+.env.local
+.env.production
+!.env.example
+
+# ── ChromaDB / Vector Store ──────────────────
+chroma_data/
+backend/chroma_data/
+
+# ── Uploaded Files / Temp ────────────────────
+backend/temp_files/
+backend/uploads/
+temp_files/
+uploads/
+*.tmp
+
+# ── Node / Frontend ─────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── IDE / Editor ─────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────
+*.log
+logs/
+
+# ── Testing ──────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# ── AI / ML Models (large files) ─────────────
+*.bin
+*.pt
+*.onnx
+*.safetensors
+models/
+
+# ── OS Files ─────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# ── Misc ─────────────────────────────────────
+*.bak
+*.orig
+.gemini/

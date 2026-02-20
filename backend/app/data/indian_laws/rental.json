@@ -1,0 +1,150 @@
+{
+    "law_name": "Model Tenancy Act 2021",
+    "jurisdiction": "India",
+    "applicable_states": [
+        "all"
+    ],
+    "contract_type": "rental",
+    "effective_date": "2021-06-02",
+    "standard_clauses": [
+        {
+            "clause_id": "MTA_001",
+            "clause_name": "Security Deposit Limit",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 11, Model Tenancy Act 2021",
+            "rule": {
+                "type": "max_value",
+                "field": "security_deposit",
+                "max_months": 2
+            },
+            "red_flag_if": "security deposit exceeds 2 months rent for residential",
+            "plain_english": "Your landlord cannot ask for more than 2 months rent as security deposit for residential premises.",
+            "plain_hindi": "मकान मालिक आवासीय परिसर के लिए 2 महीने के किराए से अधिक जमानत राशि नहीं मांग सकता।",
+            "template_clause": "The Security Deposit shall not exceed two (2) months' rent as mandated by Section 11 of the Model Tenancy Act, 2021.",
+            "keywords_to_detect": [
+                "security deposit",
+                "advance",
+                "caution deposit",
+                "refundable deposit"
+            ]
+        },
+        {
+            "clause_id": "MTA_002",
+            "clause_name": "Rent Agreement Registration",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 4, Model Tenancy Act 2021",
+            "red_flag_if": "no mention of registration of tenancy agreement",
+            "plain_english": "Every tenancy agreement must be registered with the Rent Authority.",
+            "plain_hindi": "प्रत्येक किरायेदारी समझौते को किराया प्राधिकरण के साथ पंजीकृत करना अनिवार्य है।",
+            "template_clause": "This Agreement shall be registered with the Rent Authority within two months of execution.",
+            "keywords_to_detect": [
+                "registration",
+                "rent authority",
+                "registered agreement"
+            ]
+        },
+        {
+            "clause_id": "MTA_003",
+            "clause_name": "Notice Period for Termination",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 22, Model Tenancy Act 2021",
+            "red_flag_if": "notice period less than 1 month or no notice clause",
+            "plain_english": "Either party must give at least 1 month written notice before termination.",
+            "plain_hindi": "किसी भी पार्टी को समाप्ति से पहले कम से कम 1 महीने की लिखित सूचना देनी होगी।",
+            "template_clause": "Either party may terminate this Agreement by giving not less than one (1) month's written notice.",
+            "keywords_to_detect": [
+                "notice period",
+                "termination notice",
+                "notice to vacate"
+            ]
+        },
+        {
+            "clause_id": "MTA_004",
+            "clause_name": "Rent Revision Clause",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 9, Model Tenancy Act 2021",
+            "red_flag_if": "rent increase exceeds 10% annually or no cap on increase",
+            "plain_english": "Rent revision terms must be specified and should not be unreasonable.",
+            "plain_hindi": "किराया संशोधन की शर्तें निर्दिष्ट होनी चाहिए और अनुचित नहीं होनी चाहिए।",
+            "template_clause": "Rent shall be revised as mutually agreed, with an annual increase not exceeding 10%.",
+            "keywords_to_detect": [
+                "rent revision",
+                "rent increase",
+                "annual increase",
+                "escalation"
+            ]
+        },
+        {
+            "clause_id": "MTA_005",
+            "clause_name": "Maintenance Responsibility",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 14, Model Tenancy Act 2021",
+            "red_flag_if": "all maintenance pushed to tenant including structural repairs",
+            "plain_english": "Structural repairs are the landlord's responsibility. Minor repairs are the tenant's.",
+            "plain_hindi": "संरचनात्मक मरम्मत मकान मालिक की जिम्मेदारी है। मामूली मरम्मत किरायेदार की है।",
+            "template_clause": "The Landlord shall be responsible for structural repairs. The Tenant shall maintain the premises and bear costs of minor repairs.",
+            "keywords_to_detect": [
+                "maintenance",
+                "repairs",
+                "structural repairs",
+                "minor repairs"
+            ]
+        },
+        {
+            "clause_id": "MTA_006",
+            "clause_name": "Security Deposit Refund Timeline",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 12, Model Tenancy Act 2021",
+            "red_flag_if": "no refund timeline or timeline exceeds 1 month after vacating",
+            "plain_english": "Security deposit must be refunded within 1 month of vacating the premises.",
+            "plain_hindi": "परिसर खाली करने के 1 महीने के भीतर जमानत राशि वापस करनी होगी।",
+            "template_clause": "The Security Deposit shall be refunded within one (1) month of the Tenant vacating the premises, after deducting legitimate costs.",
+            "keywords_to_detect": [
+                "refund",
+                "deposit refund",
+                "return of deposit",
+                "security return"
+            ]
+        },
+        {
+            "clause_id": "MTA_007",
+            "clause_name": "Subletting Clause",
+            "required": false,
+            "severity_if_missing": "low",
+            "law_section": "Section 17, Model Tenancy Act 2021",
+            "red_flag_if": "subletting allowed without landlord consent",
+            "plain_english": "Subletting is not allowed without written consent of the landlord.",
+            "plain_hindi": "मकान मालिक की लिखित सहमति के बिना उपकिराया देना अनुमत नहीं है।",
+            "template_clause": "The Tenant shall not sublet the premises without prior written consent of the Landlord.",
+            "keywords_to_detect": [
+                "sublet",
+                "subletting",
+                "sub-lease",
+                "assign"
+            ]
+        },
+        {
+            "clause_id": "MTA_008",
+            "clause_name": "Essential Services",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 20, Model Tenancy Act 2021",
+            "red_flag_if": "landlord can cut essential services like water and electricity",
+            "plain_english": "Landlord cannot cut off essential services like water, electricity to force eviction.",
+            "plain_hindi": "मकान मालिक बेदखली के लिए पानी, बिजली जैसी आवश्यक सेवाएं बंद नहीं कर सकता।",
+            "template_clause": "The Landlord shall not withhold or cut off essential services including water and electricity supply.",
+            "keywords_to_detect": [
+                "essential services",
+                "water supply",
+                "electricity",
+                "utilities"
+            ]
+        }
+    ]
+}

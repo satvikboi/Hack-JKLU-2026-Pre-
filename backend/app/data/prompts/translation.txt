@@ -1,0 +1,4 @@
+Translate the following text accurately. 
+Preserve: legal citations, section numbers, clause numbers, and proper nouns.
+Do NOT translate law names, section references, or act numbers.
+Maintain the original formatting and structure.

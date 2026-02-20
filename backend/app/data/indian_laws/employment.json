@@ -1,0 +1,179 @@
+{
+    "law_name": "Indian Labour Codes 2020",
+    "jurisdiction": "India",
+    "applicable_states": [
+        "all"
+    ],
+    "contract_type": "employment",
+    "effective_date": "2020-09-28",
+    "standard_clauses": [
+        {
+            "clause_id": "EMP_001",
+            "clause_name": "Appointment Terms",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 6, Code on Wages 2019",
+            "red_flag_if": "no clear designation, salary, or reporting structure",
+            "plain_english": "Employment contract must clearly state designation, salary, and terms.",
+            "plain_hindi": "रोजगार अनुबंध में पदनाम, वेतन और शर्तें स्पष्ट रूप से बताई जानी चाहिए।",
+            "template_clause": "The Employee is appointed as [Designation] with a monthly CTC of INR [Amount].",
+            "keywords_to_detect": [
+                "designation",
+                "appointment",
+                "position",
+                "role"
+            ]
+        },
+        {
+            "clause_id": "EMP_002",
+            "clause_name": "Provident Fund (PF)",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "EPF Act 1952, Section 6",
+            "red_flag_if": "no PF contribution for establishments with 20+ employees",
+            "plain_english": "Employer must contribute 12% of basic salary to EPF for establishments with 20+ employees.",
+            "plain_hindi": "20+ कर्मचारियों वाले प्रतिष्ठानों के लिए नियोक्ता को मूल वेतन का 12% EPF में योगदान करना होगा।",
+            "template_clause": "The Company shall contribute to the Employee's Provident Fund as per the EPF Act 1952.",
+            "keywords_to_detect": [
+                "provident fund",
+                "PF",
+                "EPF",
+                "retirement fund"
+            ]
+        },
+        {
+            "clause_id": "EMP_003",
+            "clause_name": "Non-Compete Clause Enforceability",
+            "required": false,
+            "severity_if_missing": "low",
+            "law_section": "Section 27, Indian Contract Act 1872",
+            "red_flag_if": "non-compete clause extending beyond employment period",
+            "plain_english": "Post-employment non-compete clauses are generally unenforceable in India.",
+            "plain_hindi": "रोजगार के बाद की गैर-प्रतिस्पर्धा शर्तें भारत में सामान्यतः लागू नहीं होतीं।",
+            "template_clause": "The non-compete obligations shall apply only during the term of employment.",
+            "keywords_to_detect": [
+                "non-compete",
+                "non compete",
+                "restrictive covenant",
+                "competition"
+            ]
+        },
+        {
+            "clause_id": "EMP_004",
+            "clause_name": "Notice Period",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 62, Industrial Relations Code 2020",
+            "red_flag_if": "notice period exceeds 3 months or is asymmetric",
+            "plain_english": "Notice period should be reasonable and symmetric for both parties.",
+            "plain_hindi": "नोटिस अवधि उचित होनी चाहिए और दोनों पक्षों के लिए समान होनी चाहिए।",
+            "template_clause": "Either party may terminate employment by giving [X] months written notice or salary in lieu thereof.",
+            "keywords_to_detect": [
+                "notice period",
+                "termination notice",
+                "resignation notice"
+            ]
+        },
+        {
+            "clause_id": "EMP_005",
+            "clause_name": "Gratuity",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Payment of Gratuity Act 1972",
+            "red_flag_if": "no gratuity provision after 5 years of service",
+            "plain_english": "Employees completing 5 years are entitled to gratuity payment.",
+            "plain_hindi": "5 वर्ष पूरे करने वाले कर्मचारी ग्रेच्युटी भुगतान के हकदार हैं।",
+            "template_clause": "Gratuity shall be payable as per the Payment of Gratuity Act 1972 upon completion of 5 years.",
+            "keywords_to_detect": [
+                "gratuity",
+                "terminal benefits",
+                "retirement benefits"
+            ]
+        },
+        {
+            "clause_id": "EMP_006",
+            "clause_name": "Working Hours",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 25, Occupational Safety Code 2020",
+            "red_flag_if": "working hours exceed 48 per week or 9 per day",
+            "plain_english": "Maximum working hours: 8 hours/day, 48 hours/week. Overtime must be compensated.",
+            "plain_hindi": "अधिकतम कार्य घंटे: 8 घंटे/दिन, 48 घंटे/सप्ताह। ओवरटाइम का मुआवजा दिया जाना चाहिए।",
+            "template_clause": "Working hours shall not exceed 48 hours per week. Overtime beyond 8 hours/day shall be compensated.",
+            "keywords_to_detect": [
+                "working hours",
+                "work hours",
+                "overtime",
+                "shift"
+            ]
+        },
+        {
+            "clause_id": "EMP_007",
+            "clause_name": "Leave Policy",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 32, Code on Wages 2019",
+            "red_flag_if": "annual leave less than 15 days or no sick leave",
+            "plain_english": "Employees are entitled to minimum annual leave and sick leave as per law.",
+            "plain_hindi": "कर्मचारी कानून के अनुसार न्यूनतम वार्षिक छुट्टी और बीमार छुट्टी के हकदार हैं।",
+            "template_clause": "The Employee shall be entitled to [X] days of paid annual leave and [Y] days of sick leave per year.",
+            "keywords_to_detect": [
+                "leave",
+                "annual leave",
+                "sick leave",
+                "paid leave",
+                "vacation"
+            ]
+        },
+        {
+            "clause_id": "EMP_008",
+            "clause_name": "ESIC Coverage",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "ESI Act 1948",
+            "red_flag_if": "no ESIC for employees with monthly wages below 21000",
+            "plain_english": "ESIC coverage mandatory for employees earning below Rs 21,000/month in applicable establishments.",
+            "plain_hindi": "लागू प्रतिष्ठानों में 21,000 रुपये/माह से कम कमाने वाले कर्मचारियों के लिए ESIC कवरेज अनिवार्य।",
+            "template_clause": "The Company shall register the Employee under ESIC as per the ESI Act 1948 where applicable.",
+            "keywords_to_detect": [
+                "ESIC",
+                "ESI",
+                "health insurance",
+                "medical benefits"
+            ]
+        },
+        {
+            "clause_id": "EMP_009",
+            "clause_name": "Probation Period",
+            "required": false,
+            "severity_if_missing": "low",
+            "law_section": "Industrial Employment (Standing Orders) Act 1946",
+            "red_flag_if": "probation period exceeds 6 months",
+            "plain_english": "Probation period should generally not exceed 6 months.",
+            "plain_hindi": "परिवीक्षा अवधि सामान्यतः 6 महीने से अधिक नहीं होनी चाहिए।",
+            "template_clause": "The Employee shall be on probation for [X] months, not exceeding six (6) months.",
+            "keywords_to_detect": [
+                "probation",
+                "trial period",
+                "probationary period"
+            ]
+        },
+        {
+            "clause_id": "EMP_010",
+            "clause_name": "Termination Grounds",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 59, Industrial Relations Code 2020",
+            "red_flag_if": "termination at will without cause or due process",
+            "plain_english": "Termination must follow due process. At-will termination without cause may violate labour laws.",
+            "plain_hindi": "समाप्ति उचित प्रक्रिया का पालन करनी चाहिए। बिना कारण इच्छानुसार समाप्ति श्रम कानूनों का उल्लंघन हो सकता है।",
+            "template_clause": "Employment may be terminated for cause with written notice specifying grounds.",
+            "keywords_to_detect": [
+                "termination",
+                "dismissal",
+                "at will",
+                "grounds for termination"
+            ]
+        }
+    ]
+}

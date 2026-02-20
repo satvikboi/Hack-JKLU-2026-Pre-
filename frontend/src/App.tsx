@@ -9,6 +9,7 @@ import { VoiceAssistant } from './pages/VoiceAssistant';
 import { IndianLawHub } from './pages/IndianLawHub';
 import { PushbackGenerator } from './pages/PushbackGenerator';
 import { Settings } from './pages/Settings';
+import { AskQuery } from './pages/AskQuery';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="analyze" element={<Analyze />} />
           <Route path="results" element={<Results />} />
+          <Route path="ask" element={<AskQuery />} />
           <Route path="compare" element={<CompareDrafts />} />
           <Route path="voice" element={<VoiceAssistant />} />
           <Route path="laws" element={<IndianLawHub />} />

@@ -1,0 +1,74 @@
+{
+    "law_name": "Consumer Protection Act 2019",
+    "jurisdiction": "India",
+    "contract_type": "consumer",
+    "standard_clauses": [
+        {
+            "clause_id": "CON_001",
+            "clause_name": "Right to Refund",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 2(9), Consumer Protection Act 2019",
+            "red_flag_if": "no refund policy or non-refundable clause",
+            "plain_english": "Consumers have the right to refund for defective goods or deficient services.",
+            "plain_hindi": "उपभोक्ताओं को दोषपूर्ण वस्तुओं या अपर्याप्त सेवाओं के लिए वापसी का अधिकार है।",
+            "template_clause": "The Consumer shall be entitled to a full refund within [X] days for defective products.",
+            "keywords_to_detect": [
+                "refund",
+                "return policy",
+                "money back",
+                "cancellation"
+            ]
+        },
+        {
+            "clause_id": "CON_002",
+            "clause_name": "Warranty Terms",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 2(11), Consumer Protection Act 2019",
+            "red_flag_if": "no warranty or warranty voiding conditions are unfair",
+            "plain_english": "Product warranty terms must be clearly stated.",
+            "plain_hindi": "उत्पाद वारंटी शर्तें स्पष्ट रूप से बताई जानी चाहिए।",
+            "template_clause": "The product carries a warranty of [X] months from date of purchase.",
+            "keywords_to_detect": [
+                "warranty",
+                "guarantee",
+                "product warranty"
+            ]
+        },
+        {
+            "clause_id": "CON_003",
+            "clause_name": "Unfair Trade Practice",
+            "required": false,
+            "severity_if_missing": "medium",
+            "law_section": "Section 2(47), Consumer Protection Act 2019",
+            "red_flag_if": "misleading advertising or false claims in contract",
+            "plain_english": "Contract should not contain misleading claims about product/service.",
+            "plain_hindi": "अनुबंध में उत्पाद/सेवा के बारे में भ्रामक दावे नहीं होने चाहिए।",
+            "template_clause": "All product specifications and claims are accurate as stated.",
+            "keywords_to_detect": [
+                "unfair trade",
+                "misleading",
+                "false claim",
+                "deceptive"
+            ]
+        },
+        {
+            "clause_id": "CON_004",
+            "clause_name": "Product Liability",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Chapter VI, Consumer Protection Act 2019",
+            "red_flag_if": "complete waiver of product liability",
+            "plain_english": "Manufacturer/seller cannot completely waive liability for product defects.",
+            "plain_hindi": "निर्माता/विक्रेता उत्पाद दोषों के लिए पूरी तरह दायित्व छोड़ नहीं सकते।",
+            "template_clause": "The Manufacturer/Seller shall be liable for damages caused by product defects.",
+            "keywords_to_detect": [
+                "liability",
+                "product liability",
+                "defect",
+                "damages"
+            ]
+        }
+    ]
+}

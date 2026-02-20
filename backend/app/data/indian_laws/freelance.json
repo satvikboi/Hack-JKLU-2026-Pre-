@@ -1,0 +1,110 @@
+{
+    "law_name": "Indian Contract Act 1872 & IT Act 2000",
+    "jurisdiction": "India",
+    "contract_type": "freelance",
+    "standard_clauses": [
+        {
+            "clause_id": "FR_001",
+            "clause_name": "Scope of Work",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 10, Indian Contract Act 1872",
+            "red_flag_if": "vague or undefined scope of work",
+            "plain_english": "Contract must clearly define the scope of work and deliverables.",
+            "plain_hindi": "अनुबंध में कार्य का दायरा और डिलीवरेबल्स स्पष्ट रूप से परिभाषित होने चाहिए।",
+            "template_clause": "The Contractor shall deliver the following services: [describe scope].",
+            "keywords_to_detect": [
+                "scope of work",
+                "deliverables",
+                "services",
+                "tasks"
+            ]
+        },
+        {
+            "clause_id": "FR_002",
+            "clause_name": "Payment Terms",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 73, Indian Contract Act 1872",
+            "red_flag_if": "payment timeline exceeds 30 days or no payment terms",
+            "plain_english": "Payment terms including amount, milestones, and timeline must be specified.",
+            "plain_hindi": "भुगतान की शर्तें जिसमें राशि, मील के पत्थर और समय-सीमा शामिल होनी चाहिए।",
+            "template_clause": "The Client shall pay INR [amount] within [X] days of invoice submission.",
+            "keywords_to_detect": [
+                "payment",
+                "invoice",
+                "compensation",
+                "fees",
+                "billing"
+            ]
+        },
+        {
+            "clause_id": "FR_003",
+            "clause_name": "Intellectual Property Rights",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Copyright Act 1957",
+            "red_flag_if": "all IP transferred without fair compensation",
+            "plain_english": "IP ownership must be clearly defined — who owns the work product.",
+            "plain_hindi": "बौद्धिक संपदा स्वामित्व स्पष्ट रूप से परिभाषित होना चाहिए।",
+            "template_clause": "IP rights in the deliverables shall vest with [Party] upon full payment.",
+            "keywords_to_detect": [
+                "intellectual property",
+                "IP",
+                "copyright",
+                "ownership of work"
+            ]
+        },
+        {
+            "clause_id": "FR_004",
+            "clause_name": "Confidentiality",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 72, Indian Contract Act 1872",
+            "red_flag_if": "no confidentiality obligations or one-sided NDA",
+            "plain_english": "Both parties should maintain confidentiality of shared information.",
+            "plain_hindi": "दोनों पक्षों को साझा जानकारी की गोपनीयता बनाए रखनी चाहिए।",
+            "template_clause": "Both parties shall maintain confidentiality of proprietary information.",
+            "keywords_to_detect": [
+                "confidential",
+                "NDA",
+                "non-disclosure",
+                "proprietary"
+            ]
+        },
+        {
+            "clause_id": "FR_005",
+            "clause_name": "Termination Clause",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 62-67, Indian Contract Act 1872",
+            "red_flag_if": "termination only by one party or without notice",
+            "plain_english": "Both parties should have the right to terminate with reasonable notice.",
+            "plain_hindi": "दोनों पक्षों को उचित सूचना के साथ समाप्त करने का अधिकार होना चाहिए।",
+            "template_clause": "Either party may terminate with [X] days written notice.",
+            "keywords_to_detect": [
+                "termination",
+                "end of contract",
+                "cancel",
+                "exit clause"
+            ]
+        },
+        {
+            "clause_id": "FR_006",
+            "clause_name": "Dispute Resolution",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Arbitration and Conciliation Act 1996",
+            "red_flag_if": "no dispute resolution mechanism specified",
+            "plain_english": "Contract should specify how disputes will be resolved.",
+            "plain_hindi": "अनुबंध में विवाद समाधान तंत्र निर्दिष्ट होना चाहिए।",
+            "template_clause": "Disputes shall be resolved through arbitration under the Arbitration Act 1996.",
+            "keywords_to_detect": [
+                "dispute",
+                "arbitration",
+                "mediation",
+                "jurisdiction"
+            ]
+        }
+    ]
+}

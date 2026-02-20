@@ -1,0 +1,75 @@
+{
+    "law_name": "Indian Contract Act 1872",
+    "jurisdiction": "India",
+    "contract_type": "nda",
+    "standard_clauses": [
+        {
+            "clause_id": "NDA_001",
+            "clause_name": "Definition of Confidential Information",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Section 27, Indian Contract Act 1872",
+            "red_flag_if": "overly broad definition covering all information",
+            "plain_english": "Confidential information must be clearly defined and not overly broad.",
+            "plain_hindi": "गोपनीय जानकारी स्पष्ट रूप से परिभाषित होनी चाहिए।",
+            "template_clause": "Confidential Information means information specifically designated as confidential.",
+            "keywords_to_detect": [
+                "confidential information",
+                "definition",
+                "proprietary",
+                "trade secret"
+            ]
+        },
+        {
+            "clause_id": "NDA_002",
+            "clause_name": "Duration of Obligation",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 27, Indian Contract Act 1872",
+            "red_flag_if": "perpetual NDA obligation",
+            "plain_english": "NDA obligations should have a reasonable time limit.",
+            "plain_hindi": "NDA दायित्वों की उचित समय सीमा होनी चाहिए।",
+            "template_clause": "Confidentiality obligations shall survive for [X] years after termination.",
+            "keywords_to_detect": [
+                "duration",
+                "term",
+                "period",
+                "survival"
+            ]
+        },
+        {
+            "clause_id": "NDA_003",
+            "clause_name": "Permitted Disclosures",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 23, Indian Contract Act 1872",
+            "red_flag_if": "no exceptions for legally required disclosures",
+            "plain_english": "NDA must allow disclosure when required by law or court order.",
+            "plain_hindi": "NDA में कानून या अदालत के आदेश से आवश्यक प्रकटीकरण की अनुमति होनी चाहिए।",
+            "template_clause": "Disclosure is permitted when required by applicable law or court order.",
+            "keywords_to_detect": [
+                "permitted disclosure",
+                "exceptions",
+                "legal requirement",
+                "court order"
+            ]
+        },
+        {
+            "clause_id": "NDA_004",
+            "clause_name": "Return of Information",
+            "required": true,
+            "severity_if_missing": "low",
+            "law_section": "Indian Contract Act 1872",
+            "red_flag_if": "no provision for return or destruction of confidential materials",
+            "plain_english": "On termination, all confidential materials should be returned or destroyed.",
+            "plain_hindi": "समाप्ति पर सभी गोपनीय सामग्री वापस या नष्ट की जानी चाहिए।",
+            "template_clause": "Upon termination, all confidential materials shall be returned or destroyed.",
+            "keywords_to_detect": [
+                "return",
+                "destruction",
+                "materials",
+                "documents"
+            ]
+        }
+    ]
+}

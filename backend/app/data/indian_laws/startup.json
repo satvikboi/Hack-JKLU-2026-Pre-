@@ -1,0 +1,92 @@
+{
+    "law_name": "Companies Act 2013 & DPIIT Guidelines",
+    "jurisdiction": "India",
+    "contract_type": "startup",
+    "standard_clauses": [
+        {
+            "clause_id": "ST_001",
+            "clause_name": "Equity Vesting Schedule",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Companies Act 2013, Section 62",
+            "red_flag_if": "no vesting or cliff period for founder equity",
+            "plain_english": "Founder equity should have a vesting schedule with cliff period.",
+            "plain_hindi": "संस्थापक इक्विटी में क्लिफ अवधि के साथ वेस्टिंग शेड्यूल होना चाहिए।",
+            "template_clause": "Founder shares shall vest over 4 years with a 1-year cliff.",
+            "keywords_to_detect": [
+                "vesting",
+                "cliff",
+                "equity",
+                "shares"
+            ]
+        },
+        {
+            "clause_id": "ST_002",
+            "clause_name": "Anti-Dilution Protection",
+            "required": true,
+            "severity_if_missing": "critical",
+            "law_section": "Companies Act 2013",
+            "red_flag_if": "full ratchet anti-dilution unfavorable to founders",
+            "plain_english": "Anti-dilution terms should use weighted average, not full ratchet.",
+            "plain_hindi": "एंटी-डाइल्यूशन शर्तों में भारित औसत का उपयोग होना चाहिए।",
+            "template_clause": "Anti-dilution protection shall be on a weighted average basis.",
+            "keywords_to_detect": [
+                "anti-dilution",
+                "dilution",
+                "ratchet",
+                "weighted average"
+            ]
+        },
+        {
+            "clause_id": "ST_003",
+            "clause_name": "Liquidation Preference",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Companies Act 2013",
+            "red_flag_if": "participating preferred with more than 1x liquidation preference",
+            "plain_english": "Liquidation preference should be non-participating 1x.",
+            "plain_hindi": "लिक्विडेशन प्रेफरेंस नॉन-पार्टिसिपेटिंग 1x होना चाहिए।",
+            "template_clause": "Investors shall have a non-participating 1x liquidation preference.",
+            "keywords_to_detect": [
+                "liquidation preference",
+                "liquidation",
+                "preference",
+                "waterfall"
+            ]
+        },
+        {
+            "clause_id": "ST_004",
+            "clause_name": "Board Composition",
+            "required": true,
+            "severity_if_missing": "medium",
+            "law_section": "Section 149, Companies Act 2013",
+            "red_flag_if": "investors have majority board seats",
+            "plain_english": "Founders should retain board control in early stages.",
+            "plain_hindi": "प्रारंभिक चरणों में संस्थापकों को बोर्ड नियंत्रण बनाए रखना चाहिए।",
+            "template_clause": "The Board shall consist of [X] Founder directors and [Y] Investor directors.",
+            "keywords_to_detect": [
+                "board",
+                "directors",
+                "board composition",
+                "governance"
+            ]
+        },
+        {
+            "clause_id": "ST_005",
+            "clause_name": "Drag Along Rights",
+            "required": false,
+            "severity_if_missing": "low",
+            "law_section": "Companies Act 2013",
+            "red_flag_if": "drag along triggered at very low thresholds",
+            "plain_english": "Drag-along should require supermajority approval.",
+            "plain_hindi": "ड्रैग-अलॉन्ग के लिए अधिसंख्य अनुमोदन आवश्यक होना चाहिए।",
+            "template_clause": "Drag-along rights shall require approval of 75% of shareholders.",
+            "keywords_to_detect": [
+                "drag along",
+                "tag along",
+                "forced sale",
+                "co-sale"
+            ]
+        }
+    ]
+}
