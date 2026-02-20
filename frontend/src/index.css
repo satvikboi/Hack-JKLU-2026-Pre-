@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #0A0E1A;
+  --color-bg-secondary: #111827;
+  --color-bg-tertiary: #1E2A3A;
+  --color-accent-saffron: #FF9933;
+  --color-accent-gold: #D4A017;
+  --color-accent-teal: #0D9488;
+  --color-accent-red: #EF4444;
+  --color-accent-amber: #F59E0B;
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #9CA3AF;
+  --color-text-muted: #4B5563;
+  --color-border: #1F2937;
+
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-hindi: "Noto Sans Devanagari", sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-primary: #0A0E1A;
+    --bg-secondary: #111827;
+    --bg-tertiary: #1E2A3A;
+    --accent-saffron: #FF9933;
+    --accent-gold: #D4A017;
+    --accent-teal: #0D9488;
+    --accent-red: #EF4444;
+    --accent-amber: #F59E0B;
+    --text-primary: #F9FAFB;
+    --text-secondary: #9CA3AF;
+    --text-muted: #4B5563;
+    --border: #1F2937;
+  }
+
+  body {
+    @apply bg-[var(--bg-primary)] text-[var(--text-primary)] font-sans antialiased text-base selection:bg-accent-saffron/30;
+  }
+}
+
+@layer utilities {
+  .bg-noise {
+    position: relative;
+  }
+
+  .bg-noise::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Glass morphism classes */
+  .glass {
+    @apply bg-bg-secondary/70 backdrop-blur-md border border-border;
+  }
+
+  .glass-panel {
+    @apply bg-bg-tertiary/70 backdrop-blur-md border border-white/5 shadow-xl;
+  }
+
+  /* Text Gradients */
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-gold to-yellow-200;
+  }
+}

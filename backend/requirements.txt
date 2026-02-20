@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+docling
+langchain
+langchain-core
+langchain-huggingface
+langchain-chroma
+langchain-openai
+pydantic
